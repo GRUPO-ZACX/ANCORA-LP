@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Âncora | Administradora de Condomínios</title>
+  <meta
+    name="description"
+    content="Administradora de condomínios focada em gestão real, operação completa e valorização do patrimônio."
+  >
+  <link rel="icon" type="image/png" href="favicon.png?v=20260327-1">
+  <link rel="shortcut icon" href="favicon.png?v=20260327-1">
+  <link rel="apple-touch-icon" href="favicon.png?v=20260327-1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css?v=20260401-9">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P2H9J3JK');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-877546907"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-877546907');
+  </script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2H9J3JK"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="#" aria-label="Âncora">
+        <img
+          src="data:image/png;base64,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"
+          alt="Âncora"
+          width="104"
+          height="26"
+          loading="eager"
+          decoding="sync"
+          fetchpriority="high"
+        >
+      </a>
+      <a class="button button--light button--small" href="#formulario">
+        <span>QUERO ORGANIZAR MEU CONDOMÍNIO</span>
+        <span class="button__arrow" aria-hidden="true"></span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-stage">
+      <section class="hero">
+        <div class="shell hero__grid">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              <span class="hero__title-accent">Administradora<br>de Condomínios</span>
+              <span class="hero__title-regular">que Resolve<br>de Verdade</span>
+            </h1>
+            <p class="hero__copy">
+              BPO Financeiro, burocracia, assembleias e conflitos, <strong>tudo organizado para o síndico deixar de apagar incêndio</strong> e começar a fazer a gestão com tranquilidade
+            </p>
+
+            <div class="hero__highlights" aria-label="Frentes de atuação">
+              <span class="hero-highlight">
+                <span class="hero-highlight__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation">
+                    <path d="M4 18.5H20"></path>
+                    <path d="M6.5 15.5V10.5"></path>
+                    <path d="M11.5 15.5V7.5"></path>
+                    <path d="M16.5 15.5V12.5"></path>
+                  </svg>
+                </span>
+                <span>BPO Financeiro</span>
+              </span>
+
+              <span class="hero-highlight">
+                <span class="hero-highlight__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation">
+                    <path d="M7 3.5H14.5L18.5 7.5V20.5H7Z"></path>
+                    <path d="M14 3.5V8H18.5"></path>
+                    <path d="M10 11H15"></path>
+                    <path d="M10 14.5H15"></path>
+                  </svg>
+                </span>
+                <span>Burocracia</span>
+              </span>
+
+              <span class="hero-highlight">
+                <span class="hero-highlight__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation">
+                    <path d="M5 6.5H19V15.5H10L6 19V15.5H5Z"></path>
+                    <path d="M8.5 10.5H15.5"></path>
+                    <path d="M8.5 13.5H13.5"></path>
+                  </svg>
+                </span>
+                <span>Assembleias</span>
+              </span>
+
+              <span class="hero-highlight">
+                <span class="hero-highlight__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation">
+                    <path d="M12 4.75L17.75 7V11.75C17.75 15.1 15.55 17.9 12 19.25C8.45 17.9 6.25 15.1 6.25 11.75V7L12 4.75Z"></path>
+                    <path d="M9.5 12.25L11.25 14L14.75 10.5"></path>
+                  </svg>
+                </span>
+                <span>Conflitos</span>
+              </span>
+            </div>
+          </div>
+
+          <form class="lead-form" id="formulario">
+            <label class="sr-only" for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" placeholder="Nome" required>
+
+            <label class="sr-only" for="whatsapp">Whatsapp</label>
+            <input id="whatsapp" name="whatsapp" type="tel" placeholder="Whatsapp" required>
+
+            <label class="sr-only" for="email">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="E-mail" required>
+
+            <label class="sr-only" for="papel">Qual é o seu papel no condomínio?</label>
+            <div class="lead-form__select custom-select" data-select>
+              <input id="papel" name="papel" type="hidden" value="">
+              <button
+                class="custom-select__trigger"
+                type="button"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-controls="papel-opcoes"
+              >
+                <span class="custom-select__text">Qual é o seu papel no condomínio?</span>
+                <span class="custom-select__arrow" aria-hidden="true"></span>
+              </button>
+              <div class="custom-select__menu" id="papel-opcoes" role="listbox">
+                <button class="custom-select__option" type="button" role="option" data-value="Síndico">Síndico</button>
+                <button class="custom-select__option" type="button" role="option" data-value="Conselheiro">Conselheiro</button>
+                <button class="custom-select__option" type="button" role="option" data-value="Morador">Morador</button>
+                <button class="custom-select__option" type="button" role="option" data-value="Administrador">Administrador</button>
+              </div>
+            </div>
+
+            <label class="sr-only" for="condominio">Qual é o nome do condomínio?</label>
+            <input id="condominio" name="condominio" type="text" placeholder="Qual é o nome do condomínio?" required>
+
+            <button class="button button--primary button--block" type="submit">QUERO UMA COTAÇÃO</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="diagnosis">
+        <div class="shell diagnosis__inner">
+          <h2 class="section-title section-title--light">Diagnóstico e Blindagem da Gestão</h2>
+
+          <div class="diagnosis__cards">
+            <article class="diag-card">
+              <div class="diag-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="presentation">
+                  <circle cx="10" cy="10" r="5.5"></circle>
+                  <path d="M14.5 14.5L19.5 19.5"></path>
+                  <path d="M10 7.7V12.3"></path>
+                  <path d="M7.7 10H12.3"></path>
+                </svg>
+              </div>
+              <p>
+                <strong>O objetivo é mapear os pontos críticos do seu condomínio</strong>
+                antes de qualquer contrato para você saber exatamente onde estão os riscos e o que precisa ser resolvido primeiro.
+              </p>
+            </article>
+
+            <article class="diag-card">
+              <div class="diag-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="presentation">
+                  <path d="M5.5 18.5V10.5"></path>
+                  <path d="M10.5 18.5V7.5"></path>
+                  <path d="M15.5 18.5V12.5"></path>
+                  <path d="M3.5 18.5H19"></path>
+                  <path d="M16.5 7.5H20.5"></path>
+                  <path d="M18.5 5.5V9.5"></path>
+                </svg>
+              </div>
+              <p>
+                Nesta fase, analisamos a situação financeira, a inadimplência,
+                os processos administrativos e o <strong>histórico de conflitos do seu condomínio.</strong>
+              </p>
+            </article>
+
+            <article class="diag-card">
+              <div class="diag-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="presentation">
+                  <path d="M12 4.75L17.75 7V11.75C17.75 15.1 15.55 17.9 12 19.25C8.45 17.9 6.25 15.1 6.25 11.75V7L12 4.75Z"></path>
+                  <path d="M9.5 12.25L11.25 14L14.75 10.5"></path>
+                </svg>
+              </div>
+              <p>
+                <strong>Com 18 anos de mercado e centenas de condomínios assessorados,</strong>
+                identificamos em horas o que muitos síndicos levam meses para perceber que está errado.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="activation">
+      <div class="shell activation__inner">
+        <div class="activation__title">
+          <h2>Ativação da <strong>Gestão Completa.</strong></h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline__item">
+            <span class="timeline__marker" aria-hidden="true">1</span>
+            <p>
+              Foco em quem precisa de resultado real, não de mais burocracia
+              <strong>Assumimos a operação completa:</strong> cobranças, assembleias, documentação e atendimento aos moradores.
+            </p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__marker" aria-hidden="true">2</span>
+            <p>
+              <strong>Aqui o foco é ser organizado.</strong> Boletos emitidos no prazo,
+              inadimplência tratada com processo, assembleia conduzida com ata, prestação de contas clara e síndico com tempo para fazer a gestão do que importa.
+            </p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__marker" aria-hidden="true">3</span>
+            <p>
+              Nosso sistema de gestão garante pronto atendimento em todos os canais,
+              <strong>o síndico tem acesso a tudo,</strong> em tempo real, sem depender de ligação ou e-mail perdido.
+            </p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="shell">
+        <article class="patrimony-card">
+          <h3 class="patrimony-card__heading">Relacionamento, Escala e Valorização do Patrimônio</h3>
+
+          <div class="patrimony-card__frame">
+            <div class="patrimony-card__media">
+              <img src="./FOTO.png" alt="" loading="lazy">
+            </div>
+
+            <div class="patrimony-card__panel patrimony-card__panel--content">
+              <p class="patrimony-card__lead">
+                Transformando gestão reativa em condomínio valorizado e comunidade funcional.
+              </p>
+
+              <p class="patrimony-card__statement">
+                <span class="patrimony-card__statement-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation">
+                    <path d="M4.5 20V7.5L12 4L19.5 7.5V20"></path>
+                    <path d="M9 20V14.5H15V20"></path>
+                    <path d="M8 9.5H8.01"></path>
+                    <path d="M12 9.5H12.01"></path>
+                    <path d="M16 9.5H16.01"></path>
+                    <path d="M8 12.5H8.01"></path>
+                    <path d="M16 12.5H16.01"></path>
+                  </svg>
+                </span>
+                <span>Administrar condomínio não é só pagar conta.</span>
+              </p>
+
+              <p class="patrimony-card__support">
+                É construir um ambiente onde os moradores respeitam as regras, os conflitos têm protocolo de resolução e o patrimônio se valoriza ao longo do tempo.
+              </p>
+
+              <p class="patrimony-card__closing">
+                Trabalhamos ao lado do síndico, não apenas para ele.
+                Com a operação validada e o condomínio organizado, o síndico deixa de apagar incêndio e passa a liderar de verdade.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="shell trust__inner">
+        <h2 class="trust__title">
+          Condomínios que <span>confiam na Âncora</span>
+        </h2>
+
+        <div class="trust__panel" aria-label="Indicadores da Âncora">
+          <p class="trust__intro">
+            Experiência prática, escala operacional e uma atuação consolidada no mercado condominial.
+          </p>
+
+          <div class="trust__stats">
+            <article class="trust-stat trust-stat--featured">
+              <strong data-count-up data-count-target="500" data-count-prefix="+">+500</strong>
+              <span>condomínios atendidos</span>
+            </article>
+
+            <article class="trust-stat">
+              <strong data-count-up data-count-target="300" data-count-prefix="+">+300</strong>
+              <span>síndicos atendidos</span>
+            </article>
+
+            <article class="trust-stat">
+              <strong data-count-up data-count-target="18" data-count-suffix=" anos">18 anos</strong>
+              <span>atuando no mercado condominial</span>
+            </article>
+
+            <article class="trust-stat">
+              <strong>Milhares</strong>
+              <span>de pessoas beneficiadas com os serviços da Âncora</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reasons">
+      <div class="shell reasons__inner">
+        <article class="outlined-card outlined-card--center">
+          <h2>Por que escolher a <span>Âncora</span>?</h2>
+          <p>
+            Resultado, gestão real e patrimônio valorizado. Síndico, vamos te tirar da operação e colocar na liderança.
+            Converter inadimplência em caixa saudável. Crescimento com processo, não com improviso. Buscar um condomínio organizado,
+            não só aparência de gestão.
+          </p>
+          <strong>Se você quer só alguém para assinar papel, a Âncora não é para você.</strong>
+        </article>
+
+        <article class="outlined-card outlined-card--process">
+          <h2>Como <span>organizamos</span> o seu condomínio?</h2>
+
+          <div class="process-list">
+            <div class="process-item">
+              <span class="pill">GESTÃO FINANCEIRA COMPLETA</span>
+              <div class="process-item__body">
+                <span class="process-item__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation">
+                    <path d="M4 18.5H20"></path>
+                    <path d="M6.5 15.5V10.5"></path>
+                    <path d="M11.5 15.5V7.5"></path>
+                    <path d="M16.5 15.5V12.5"></path>
+                    <path d="M14.5 5.5H20"></path>
+                    <path d="M17.25 2.75V8.25"></path>
+                  </svg>
+                </span>
+                <p>
+                  Emissão de boletos, controle de inadimplência, prestação de contas e orçamento anual estruturado
+                  para o condomínio parar de sangrar dinheiro sem saber por quê.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-item">
+              <span class="pill">ROTINA BUROCRÁTICA E DOCUMENTAL</span>
+              <div class="process-item__body">
+                <span class="process-item__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation">
+                    <path d="M7 3.5H14.5L18.5 7.5V20.5H7Z"></path>
+                    <path d="M14 3.5V8H18.5"></path>
+                    <path d="M10 11H15"></path>
+                    <path d="M10 14.5H15"></path>
+                    <path d="M10 18H13.5"></path>
+                  </svg>
+                </span>
+                <p>
+                  Organização burocrática e documental: convenção, regulamento interno, atas de assembleia,
+                  contratos com fornecedores, tudo documentado, assinado e arquivado corretamente.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-item">
+              <span class="pill">ATENDIMENTO MULTICANAL AO SÍNDICO E MORADORES</span>
+              <div class="process-item__body">
+                <span class="process-item__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation">
+                    <path d="M5 6.5H19V15.5H10L6 19V15.5H5Z"></path>
+                    <path d="M8.5 10.5H15.5"></path>
+                    <path d="M8.5 13.5H13.5"></path>
+                  </svg>
+                </span>
+                <p>
+                  Atendimento multicanal ao síndico e moradores: sistema de gestão com acesso em tempo real,
+                  pronto atendimento e histórico registrado sem informação perdida, sem síndico refém de uma ligação.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-item">
+              <span class="pill">REDUZIMOS O SEU DESGASTE OPERACIONAL</span>
+              <div class="process-item__body">
+                <span class="process-item__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation">
+                    <path d="M12 4.5V12L17 15"></path>
+                    <path d="M20 12A8 8 0 1 1 12 4"></path>
+                  </svg>
+                </span>
+                <p>
+                  Reduzimos o seu desgaste operacional: nossa equipe assume a rotina pesada
+                  para você focar no que só o síndico pode fazer, representar, decidir e liderar.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="faq__shell">
+        <details class="faq-item" open>
+          <summary>
+            <span>Preciso entender de administração para trabalhar com vocês?</span>
+            <span class="faq-item__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-item__content">
+            <p>
+              Reduzimos o seu desgaste operacional: nossa equipe assume a rotina pesada
+              para você focar no que só o síndico pode fazer, representar, decidir e liderar.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>Trocar de administradora não é muito trabalhoso?</span>
+            <span class="faq-item__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-item__content">
+            <p>
+              A transição é feita pela nossa equipe, com processo estruturado e prazo definido.
+              O condomínio não para, o síndico não precisa gerenciar a troca.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>Vocês realmente resolvem conflitos entre moradores?</span>
+            <span class="faq-item__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-item__content">
+            <p>
+              Temos protocolo para isso. Não eliminamos conflito humano, mas criamos estrutura de regras,
+              comunicação e mediação que reduz drasticamente a frequência e o desgaste.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>Em quanto tempo a gestão começa a funcionar de verdade?</span>
+            <span class="faq-item__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-item__content">
+            <p>
+              Nos primeiros 30 dias o condomínio já tem canais de atendimento ativos e o síndico
+              com visibilidade real do que está acontecendo.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="closing-cta" aria-label="Chamada final para o formulário">
+      <div class="shell closing-cta__inner">
+        <a class="button button--primary button--closing" href="#formulario">QUERO ORGANIZAR MEU CONDOMÍNIO</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer__inner">
+      <div class="footer__meta">
+        <p class="footer__lead">Canais oficiais da Âncora Condomínios.</p>
+
+        <div class="footer__links" aria-label="Links da Âncora">
+          <a
+            class="footer__link"
+            href="https://www.instagram.com/ancoracondominios/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="footer__link-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="presentation">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.25" cy="6.75" r="1"></circle>
+              </svg>
+            </span>
+            <span>Instagram</span>
+          </a>
+
+          <a
+            class="footer__link"
+            href="https://ancoracondominios.com.br"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="footer__link-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="presentation">
+                <circle cx="12" cy="12" r="8.5"></circle>
+                <path d="M3.5 12H20.5"></path>
+                <path d="M12 3.5C14.7 5.9 16.25 8.85 16.25 12C16.25 15.15 14.7 18.1 12 20.5"></path>
+                <path d="M12 3.5C9.3 5.9 7.75 8.85 7.75 12C7.75 15.15 9.3 18.1 12 20.5"></path>
+              </svg>
+            </span>
+            <span>Portal</span>
+          </a>
+        </div>
+
+        <div class="footer__legal" aria-label="Informações institucionais">
+          <p>&copy; 2026 Âncora Condomínios. Todos os direitos reservados.</p>
+          <p>Este site foi desenvolvido por Grupo ZACX.</p>
+          <p>Ambiente institucional com links e canais oficiais da marca.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=20260401-5"></script>
+</body>
+</html>
