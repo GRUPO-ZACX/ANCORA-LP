@@ -1,59 +1,89 @@
 document.documentElement.classList.add("js");
 
+const LINYT_CAPTURE_URL = "https://app.linyt.com.br/api/capture/995c68f3-dd40-42db-bce0-6debf22b1d3b";
+
 document.querySelectorAll(".lead-form").forEach((form) => {
+  const submitButton = form.querySelector('button[type="submit"]');
+  const status = document.createElement("p");
+  status.className = "lead-form__status";
+  status.setAttribute("role", "status");
+  status.setAttribute("aria-live", "polite");
+  form.append(status);
+  let submitting = false;
+
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
+    if (submitting) return;
+    status.textContent = "";
 
-    if (!form.reportValidity()) {
+    if (!form.reportValidity()) return;
+
+    const data = new FormData(form);
+    const value = (name) => String(data.get(name) || "").trim();
+    const nome = value("nome");
+    const whatsapp = value("whatsapp").replace(/\D/g, "");
+    const email = value("email");
+    const papel = value("papel");
+    const condominio = value("condominio");
+
+    if (!nome || !whatsapp || !condominio) {
+      status.textContent = "Preencha seu nome, WhatsApp e o nome do condomínio.";
+      return;
+    }
+    if (whatsapp.length < 10 || whatsapp.length > 15) {
+      status.textContent = "Informe um WhatsApp válido com DDD.";
+      form.querySelector('[name="whatsapp"]')?.focus();
+      return;
+    }
+    if (!papel) {
+      status.textContent = "Selecione qual é o seu papel no condomínio.";
+      form.querySelector(".custom-select__trigger")?.focus();
       return;
     }
 
-    const formData = new FormData(form);
-    const payload = Object.fromEntries(formData.entries());
-    const papelTrigger = form.querySelector(".custom-select__trigger");
-
-    if (!String(payload.papel || "").trim()) {
-      alert("Selecione qual e o seu papel no condominio.");
-      papelTrigger?.focus();
-      return;
-    }
+    const payload = {
+      nome,
+      whatsapp,
+      ...(email ? { email } : {}),
+      origem: "Formulário de cotação — Âncora Condomínios",
+      extra_fields: { papel, condominio },
+    };
+    const originalText = submitButton.textContent;
+    submitting = true;
+    submitButton.disabled = true;
+    submitButton.textContent = "ENVIANDO...";
+    form.setAttribute("aria-busy", "true");
 
     try {
-      const response = await fetch("https://webhook.ancora.dev.br/api/form_lp1zacx", {
+      const response = await fetch(LINYT_CAPTURE_URL, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-
-      if (!response.ok) {
-        throw new Error(`Erro HTTP ${response.status}`);
+      const result = await response.json();
+      if (!response.ok || result.ok === false) {
+        throw new Error(result.message || "Não foi possível enviar. Tente novamente.");
       }
 
       form.reset();
-
-      const hiddenInput = form.querySelector("#papel");
-      const selectText = form.querySelector(".custom-select__text");
-      const selectedOptions = form.querySelectorAll(".custom-select__option");
-
-      if (hiddenInput) {
-        hiddenInput.value = "";
-      }
-
-      if (selectText) {
-        selectText.textContent = "Qual é o seu papel no condomínio?";
-      }
-
-      selectedOptions.forEach((option) => {
+      form.querySelector('[name="papel"]').value = "";
+      form.querySelector(".custom-select__text").textContent = "Qual é o seu papel no condomínio?";
+      form.querySelector("[data-select]").classList.remove("is-open");
+      form.querySelector(".custom-select__trigger").setAttribute("aria-expanded", "false");
+      form.querySelectorAll(".custom-select__option").forEach((option) => {
         option.classList.remove("is-selected");
         option.setAttribute("aria-selected", "false");
       });
-
-      alert("Formulário enviado com sucesso!");
+      status.textContent = "Solicitação enviada com sucesso! Em breve entraremos em contato.";
     } catch (error) {
-      console.error("Erro ao enviar formulário:", error);
-      alert("Não foi possível enviar o formulário. Tente novamente.");
+      status.textContent = error instanceof TypeError
+        ? "Não foi possível conectar. Tente novamente em instantes."
+        : error.message || "Não foi possível enviar. Tente novamente.";
+    } finally {
+      submitting = false;
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
+      form.removeAttribute("aria-busy");
     }
   });
 });

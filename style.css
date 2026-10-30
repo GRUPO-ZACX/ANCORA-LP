@@ -1963,3 +1963,8 @@ body:not(.reduced-motion) .button--closing {
     transform: none;
   }
 }
+
+/* Feedback de envio do formulário */
+.lead-form__status:empty { display: none; }
+.lead-form__status { margin: 0; color: #fff; font-size: 14px; line-height: 1.5; }
+.lead-form button[type="submit"]:disabled { opacity: .7; cursor: wait; }
